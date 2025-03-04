@@ -27,7 +27,11 @@ class NoteMenu {
         } else {
             println("Введите заметку")
             val content = Scanner(System.`in`).nextLine()
-            archive.notesList.add(Note(command, content))
+            if (content == "") {
+                println("Содержание заметки не может быть пустым")
+            } else {
+                archive.notesList.add(Note(command, content))
+            }
         }
     }
 }
