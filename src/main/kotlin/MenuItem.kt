@@ -1,0 +1,1 @@
+data class MenuItem(val index: Int, val name: String, val action: () -> Unit)
